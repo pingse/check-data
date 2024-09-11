@@ -1,0 +1,38 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Main</a>
+    </div>
+</nav>
+<form class="container" action="/db/write" method="post">
+<!--    <div class="mb-3">-->
+<!--        <label class="form-label">id</label>-->
+<!--        &lt;!&ndash; 입력값: title &ndash;&gt;-->
+<!--        <input type="text" class="form-control" name="id">-->
+<!--    </div>-->
+    <div class="mb-3">
+        <label class="form-label">이름</label>
+        <!-- 입력값: title -->
+        <input type="text" class="form-control" name="name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">전화번호</label>
+        <!-- 입력값: title -->
+        <input type="text" class="form-control" name="phoneNumber">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">지역</label>
+        <!-- 입력값: title -->
+        <input type="text" class="form-control" name="region">
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+</body>
