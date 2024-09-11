@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Main</a>
+  </div>
+</nav>
+<div class="overflow-y-scroll">
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">이름</th>
+    <th scope="col">전화번호</th>
+    <th scope="col">지역</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="data : ${datas}" >
+    <td scope="row" th:text="${data.id}"></td>
+    <td th:text="${data.name}"></td>
+    <td th:text="${data.phoneNumber}"></td>
+    <td th:text="${data.region}"></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</body>
+</html>
